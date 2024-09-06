@@ -1,0 +1,35 @@
+{
+  "name": "kindex",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "build": "webpack --mode production",
+    "dev:client": "webpack serve --mode development --hot",
+    "dev:server": "tsc && node src/server.mjs",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\""
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "express": "^4.17.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
+    "@types/express": "^4.17.13",
+    "@types/json-schema": "^7.0.15",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "concurrently": "^8.2.2",
+    "css-loader": "^7.1.2",
+    "react-refresh": "^0.14.2",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.0.0",
+    "typescript": "^5.0.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0",
+    "webpack-dev-server": "^4.15.2"
+  }
+}

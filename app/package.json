@@ -17,7 +17,9 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-flagkit": "^2.0.4",
+    "react-paginate": "^8.2.0",
     "react-router-dom": "^6.26.1",
+    "react-table": "^7.8.0",
     "viem": "^2.21.3"
   },
   "devDependencies": {
@@ -27,6 +29,7 @@
     "@types/node": "^20.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@types/react-table": "^7.7.20",
     "concurrently": "^8.2.2",
     "css-loader": "^7.1.2",
     "react-refresh": "^0.14.2",

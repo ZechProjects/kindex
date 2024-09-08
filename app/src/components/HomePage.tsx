@@ -1,7 +1,7 @@
 import React from "react";
 import Flag from "react-flagkit";
 import { Link } from "react-router-dom";
-import { companyData } from "data/companyData";
+import { companyData, companyDataMap } from "data/companyData";
 
 const HomePage: React.FC = () => {
   return (
@@ -15,9 +15,11 @@ const HomePage: React.FC = () => {
           through the Kinto KYB process.
         </i>
       </p>
-      <button className="btn btn-secondary d-block mx-auto">
-        Search Directory
-      </button>
+      <div className="text-center">
+        <Link to="/search" className="btn btn-primary mx-auto btn-tight">
+          Search Directory
+        </Link>
+      </div>
       <hr></hr>
       <h2 className="text-center">Featured Companies</h2>
       <div className="row">
@@ -30,11 +32,11 @@ const HomePage: React.FC = () => {
             />
             <div className="card-body">
               <h5 className="card-title">
-                {companyData["1"].name}{" "}
-                <Flag country={companyData["1"].country} />{" "}
+                {companyDataMap["1"].name}{" "}
+                <Flag country={companyDataMap["1"].country} />{" "}
               </h5>
               <h6>★★★★✰ (1442)</h6>
-              <p className="card-text">{companyData["1"].description}</p>
+              <p className="card-text">{companyDataMap["1"].description}</p>
               <Link to="/company-profile/1" className="btn btn-primary">
                 View Company
               </Link>
@@ -50,11 +52,11 @@ const HomePage: React.FC = () => {
             />
             <div className="card-body">
               <h5 className="card-title">
-                {companyData["2"].name}{" "}
-                <Flag country={companyData["2"].country} />{" "}
+                {companyDataMap["2"].name}{" "}
+                <Flag country={companyDataMap["2"].country} />{" "}
               </h5>
               <h6>★★★★✰ (55)</h6>
-              <p className="card-text">{companyData["2"].description}</p>
+              <p className="card-text">{companyDataMap["2"].description}</p>
               <Link to="/company-profile/2" className="btn btn-primary">
                 View Company
               </Link>
@@ -70,11 +72,11 @@ const HomePage: React.FC = () => {
             />
             <div className="card-body">
               <h5 className="card-title">
-                {companyData["3"].name}{" "}
-                <Flag country={companyData["3"].country} />{" "}
+                {companyDataMap["3"].name}{" "}
+                <Flag country={companyDataMap["3"].country} />{" "}
               </h5>
               <h6>★★★★★ (112)</h6>
-              <p className="card-text">{companyData["3"].description}</p>
+              <p className="card-text">{companyDataMap["3"].description}</p>
               <Link to="/company-profile/3" className="btn btn-primary">
                 View Company
               </Link>

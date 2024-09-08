@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { reviewsData } from "data/reviewsData";
-import { companyData } from "data/companyData";
+import { companyData, companyDataMap } from "data/companyData";
 
 const ReviewsPage: React.FC = () => {
   const { companyId } = useParams<{ companyId: string }>();
 
-  const company = companyData[companyId || ""];
+  const company = companyDataMap[companyId || ""];
   const reviews = reviewsData[companyId || ""];
 
   if (!reviews) {
@@ -15,7 +15,7 @@ const ReviewsPage: React.FC = () => {
 
   return (
     <div className="container">
-      <div className="card">
+      <div className="card p-3">
         <Link
           to={`/company-profile/${companyId}`}
           className="btn btn-primary d-inline-block btn_tight"

@@ -3,6 +3,8 @@ import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./HomePage";
 import CompanyProfilePage from "./CompanyProfilePage";
 import ReviewsPage from "./ReviewsPage";
+import SearchCompanyPage from "./SearchCompanyPage";
+
 import { createKintoSDK, KintoAccountInfo } from "kinto-web-sdk";
 import { defineChain } from "viem";
 import Navbar from "./Navbar";
@@ -47,6 +49,7 @@ const App: React.FC = () => {
       />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/search" element={<SearchCompanyPage />} />
         <Route
           path="/company-profile/:companyId"
           element={<CompanyProfilePage />}

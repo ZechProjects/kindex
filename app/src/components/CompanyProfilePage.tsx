@@ -81,7 +81,7 @@ const CompanyProfilePage: React.FC = () => {
         </a>
         <hr></hr>
         <a href={`/#/transactions/${companyId}`} rel="noopener noreferrer">
-          View All Payments Transactions on Kinto
+          View All Payments Transactions
         </a>
       </div>
     </div>

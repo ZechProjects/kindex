@@ -54,7 +54,15 @@ const App: React.FC = () => {
   );
   const kintoSDK = createKintoSDK("0x0aE20e3C7aFe02c5684eb54C40387c7fb5C47Faf");
 
+  if (sessionStorage.getItem("loggedin") == "true") {
+    if (!isLoggedIn) {
+      setIsLoggedIn(true);
+    }
+  }
+
   const handleLogin = async () => {
+    if (isLoggedIn) return;
+
     console.log("Logging in...");
     async function kintoLogin() {
       try {
@@ -67,10 +75,14 @@ const App: React.FC = () => {
 
     await kintoLogin();
     setIsLoggedIn(true);
+    sessionStorage.setItem("loggedin", "true");
   };
 
   const handleLogout = () => {
+    if (!isLoggedIn) return;
+
     setIsLoggedIn(false);
+    sessionStorage.setItem("loggedin", "false");
   };
 
   async function fetchKYCViewerInfo() {

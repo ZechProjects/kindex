@@ -47,9 +47,12 @@ const Navbar: React.FC<NavbarProps> = ({
         </div>
         {/* Right-aligned button */}
         {isLoggedIn ? (
-          <button className="btn btn-danger ms-auto" onClick={handleLogout}>
-            Logout
-          </button>
+          <>
+            <button className="btn btn-primary ms-auto">Account</button> &nbsp;
+            <button className="btn btn-danger ms-auto" onClick={handleLogout}>
+              Logout
+            </button>
+          </>
         ) : (
           <button className="btn btn-primary ms-auto" onClick={handleLogin}>
             Login

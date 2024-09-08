@@ -29,18 +29,7 @@ const ReviewsPage: React.FC = () => {
             <p>
               Rating: {"★".repeat(review.rating)} {review.rating}
             </p>
-            <p>Date: {review.date}</p>
             <p>{review.description}</p>
-            <p>
-              Related Transaction Hash:{" "}
-              <a
-                href={`https://kintoscan.io/tx/${review.transaction_hash}`}
-                target="_kintoscan"
-                rel="noopener noreferrer"
-              >
-                {review.transaction_hash}
-              </a>
-            </p>
             <hr></hr>
           </div>
         ))}

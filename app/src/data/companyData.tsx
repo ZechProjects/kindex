@@ -4,6 +4,12 @@ interface CompanyProfileProps {
   website: string;
   country?: string;
   rating?: number;
+  is_kyc?: boolean;
+  is_sanctions_safe?: boolean;
+  kinto_address?: string;
+  fairtrade_status?: string[];
+  greenmark_status?: string;
+  greenmark_points?: number;
 }
 
 export const companyData: Record<string, CompanyProfileProps> = {
@@ -14,6 +20,12 @@ export const companyData: Record<string, CompanyProfileProps> = {
     website: "https://techcorp.com",
     country: "US",
     rating: 4,
+    is_kyc: true,
+    is_sanctions_safe: true,
+    kinto_address: "0xcdc3ad2a02764c3a9E9ff49B2daB19f65F07B7Bc",
+    fairtrade_status: ["Fairtrade Sourcing Program"],
+    greenmark_status: "Bronze",
+    greenmark_points: 155,
   },
   "2": {
     name: "Gourmet Catering Pte Ltd",
@@ -22,6 +34,12 @@ export const companyData: Record<string, CompanyProfileProps> = {
     website: "https://healthsolutions.com",
     country: "SG",
     rating: 4,
+    is_kyc: true,
+    is_sanctions_safe: true,
+    kinto_address: "0xcdc3ad2a02764c3a9E9ff49B2daB19f65F07B7Bc",
+    fairtrade_status: ["Fairtrade Sourcing Program"],
+    greenmark_status: "Bronze",
+    greenmark_points: 155,
   },
   "3": {
     name: "Tech Guard LLC",
@@ -30,5 +48,11 @@ export const companyData: Record<string, CompanyProfileProps> = {
     website: "https://healthsolutions.com",
     country: "FR",
     rating: 5,
+    is_kyc: true,
+    is_sanctions_safe: true,
+    kinto_address: "0xcdc3ad2a02764c3a9E9ff49B2daB19f65F07B7Bc",
+    fairtrade_status: ["Fairtrade Sourcing Program"],
+    greenmark_status: "Bronze",
+    greenmark_points: 155,
   },
 };

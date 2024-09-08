@@ -1,6 +1,14 @@
 import React from "react";
-
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  isLoggedIn: boolean;
+  handleLogin: () => void;
+  handleLogout: () => void;
+}
+const Navbar: React.FC<NavbarProps> = ({
+  isLoggedIn,
+  handleLogout,
+  handleLogin,
+}) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -37,6 +45,16 @@ const Navbar: React.FC = () => {
             </li>
           </ul>
         </div>
+        {/* Right-aligned button */}
+        {isLoggedIn ? (
+          <button className="btn btn-danger ms-auto" onClick={handleLogout}>
+            Logout
+          </button>
+        ) : (
+          <button className="btn btn-primary ms-auto" onClick={handleLogin}>
+            Login
+          </button>
+        )}
       </div>
     </nav>
   );

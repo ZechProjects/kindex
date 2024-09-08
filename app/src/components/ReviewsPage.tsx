@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar"; // Import the Navbar component
 import { Link, useParams } from "react-router-dom";
 import { reviewsData } from "data/reviewsData";
 import { companyData } from "data/companyData";
@@ -16,9 +15,11 @@ const ReviewsPage: React.FC = () => {
 
   return (
     <div className="container">
-      <Navbar />
       <div className="card">
-        <Link to={`/company-profile/${companyId}`} className="btn btn-primary">
+        <Link
+          to={`/company-profile/${companyId}`}
+          className="btn btn-primary d-inline-block btn_tight"
+        >
           Back
         </Link>
         <h1>Reviews for {company.name}</h1>

@@ -8,3 +8,8 @@ body {
   width: 64px;
   display: inline;
 }
+
+.btn_tight {
+  width: fit-content;
+  margin: 5px 0;
+}

@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar"; // Import the Navbar component
 import Flag from "react-flagkit";
 import { Link } from "react-router-dom";
 import { companyData } from "data/companyData";
@@ -7,17 +6,17 @@ import { companyData } from "data/companyData";
 const HomePage: React.FC = () => {
   return (
     <div className="container">
-      <Navbar />
       <h1 className="text-center mt-5">Kindex Directory</h1>
       <p className="text-center">
-        Decentralised listing of KYB compliant companies for your vendor needs.
+        Decentralised listing of KYB compliant* companies for your vendor needs.
+        <br></br>
+        <i>
+          * All companies listed are verified and compliant with KYB regulations
+          through the Kinto KYB process.
+        </i>
       </p>
       <button className="btn btn-secondary d-block mx-auto">
         Search Directory
-      </button>
-      <br></br>
-      <button className="btn btn-secondary d-block mx-auto">
-        Register Company
       </button>
       <hr></hr>
       <h2 className="text-center">Featured Companies</h2>
